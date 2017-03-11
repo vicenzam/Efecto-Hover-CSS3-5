@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: gray;
+}
+
+.absoluto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div.libro {
+  position: relative;
+  overflow: hidden;
+  max-width: 500px;
+  max-height: 333px;
+  display: block;
+  margin: 40px auto;
+  background: linear-gradient(to top right, #22682a, #9b4a1b, #3a342a);
+}
+
+div.libro:hover img {
+  opacity: 0.4;
+}
+
+div.libro:hover div.texto {
+  background: rgba(58, 52, 42, 0);
+}
+
+div.libro:hover div.texto:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+div.libro:hover div.texto h2 {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+div.libro:hover div.texto p {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+div.libro img {
+  position: relative;
+  opacity: 1;
+  display: block;
+  transition: opacity 0.35s;
+}
+
+div.libro a {
+  z-index: 100;
+}
+
+div.libro div.texto {
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  color: white;
+  background: rgba(58, 52, 42, 0.4);
+  transition: background 0.35s;
+}
+
+div.libro div.texto:before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  left: 30px;
+  bottom: 30px;
+  border: 1px solid white;
+  opacity: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+
+div.libro div.texto h2 {
+  margin: 25% 0 10px 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+}
+
+div.libro div.texto h2 span {
+  font-weight: 700;
+}
+
+div.libro div.texto p {
+  padding: 10px 50px;
+  font-size: 20px;
+  opacity: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
